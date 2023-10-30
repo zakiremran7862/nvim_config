@@ -25,7 +25,12 @@ local plugins = {
   "nvim-lualine/lualine.nvim",
   "akinsho/bufferline.nvim",
   "m4xshen/autoclose.nvim",
-  {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"}
+  {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
+      {
+    'nvim-telescope/telescope.nvim', tag = '0.1.4',
+-- or                              , branch = '0.1.x',
+      dependencies = { 'nvim-lua/plenary.nvim' }
+    }
 }
 
 require("lazy").setup(plugins, opts)
